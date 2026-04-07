@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 { margin-bottom: 20px; font-weight: 400; }
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    flex: 1;
+}
+
+.editor-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-box label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #9cdcfe;
+}
+
+textarea {
+    flex: 1;
+    background-color: #252526;
+    color: #ce9178;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus { border-color: #007acc; }
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+button:hover { background-color: #005f9e; }
+.btn-disassemble { background-color: #68217a; }
+.btn-disassemble:hover { background-color: #50195e; }
