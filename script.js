@@ -83,6 +83,12 @@ function disassemble() {
                 let rA = REV_REGISTERS[l.substring(4, 7)];
                 let imm = parseInt(l.substring(7, 15), 2).toString();
                 decoded_args = `${rA}, ${imm}`;
+            } else if (rem_len === 14) {
+                // NEW: 2 Registers + 1 Immediate (3 + 3 + 8 = 14 bits)
+                let rA = REV_REGISTERS[l.substring(4, 7)];
+                let rB = REV_REGISTERS[l.substring(7, 10)];
+                let imm = parseInt(l.substring(10, 18), 2).toString();
+                decoded_args = `${rA}, ${rB}, ${imm}`;
             } else {
                 decoded_args = " (Format Error)";
             }
